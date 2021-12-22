@@ -1,0 +1,36 @@
+num_participants = get_user_input()
+participants = make_empty_list(num_participants)
+signup_file.open()
+
+while (true):
+    display_menu()
+    action = get_user_input()
+
+    if (action = signup):
+        name = get_user_input()
+        slot = get_user_input()
+        if (no_errors):
+            add_participant(participants, name, slot)
+    
+    if (action = cancel_signup):
+        name = get_user_input()
+        slot = get_user_input()
+        if (no_errors):
+            remove_participant(participants, name, slot)
+    
+    if (action = view_participants):
+        slot = get_user_input()
+        view_participants(participants, slot)
+
+    if (action = save):
+        if (user_is_sure):
+            write_participants_to_file(signup_file, participants)
+    
+    if (action = exit):
+
+        if (no_unsaved_changes):
+            signup_file.close()
+            break
+        if (unsaved_changes and user_is_sure):
+            signup_file.close()
+            break
