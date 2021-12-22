@@ -1,0 +1,6 @@
+Main Menu
+1. Sign Up
+2. Cancel Sign Up
+3. View participants
+4. Save Changes
+5. Exit
